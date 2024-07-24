@@ -1,0 +1,22 @@
+[
+    { "id": 1, "level": "A1", "english": "apple", "turkish": "elma", "german": "der Apfel" },
+    { "id": 2, "level": "A1", "english": "book", "turkish": "kitap", "german": "das Buch" },
+    { "id": 3, "level": "A1", "english": "cat", "turkish": "kedi", "german": "die Katze" },
+    { "id": 4, "level": "A1", "english": "dog", "turkish": "köpek", "german": "der Hund" },
+    { "id": 5, "level": "A1", "english": "house", "turkish": "ev", "german": "das Haus" },
+    { "id": 6, "level": "A1", "english": "car", "turkish": "araba", "german": "das Auto" },
+    { "id": 7, "level": "A1", "english": "school", "turkish": "okul", "german": "die Schule" },
+    { "id": 8, "level": "A1", "english": "water", "turkish": "su", "german": "das Wasser" },
+    { "id": 9, "level": "A1", "english": "food", "turkish": "yemek", "german": "das Essen" },
+    { "id": 10, "level": "A1", "english": "friend", "turkish": "arkadaş", "german": "der Freund" },
+    { "id": 11, "level": "A1", "english": "family", "turkish": "aile", "german": "die Familie" },
+    { "id": 12, "level": "A1", "english": "city", "turkish": "şehir", "german": "die Stadt" },
+    { "id": 13, "level": "A1", "english": "country", "turkish": "ülke", "german": "das Land" },
+    { "id": 14, "level": "A1", "english": "happy", "turkish": "mutlu", "german": "glücklich" },
+    { "id": 15, "level": "A1", "english": "sad", "turkish": "üzgün", "german": "traurig" },
+    { "id": 16, "level": "A1", "english": "big", "turkish": "büyük", "german": "groß" },
+    { "id": 17, "level": "A1", "english": "small", "turkish": "küçük", "german": "klein" },
+    { "id": 18, "level": "A1", "english": "fast", "turkish": "hızlı", "german": "schnell" },
+    { "id": 19, "level": "A1", "english": "slow", "turkish": "yavaş", "german": "langsam" },
+    { "id": 20, "level": "A1", "english": "strong", "turkish": "güçlü", "german": "stark" }
+]
