@@ -1,23 +1,20 @@
 import React, { useState, useEffect } from 'react';
-import { Text, StyleSheet, View, Button  } from 'react-native';
+import { Text, StyleSheet, View, Button } from 'react-native';
 import { Card } from '@rneui/themed';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import wordList from '../assets/wordList.json'; 
+import { useSelector } from 'react-redux';
+import wordList from '../assets/wordList.json';
 
-const Flashcard = (props) => {
-    
-
-    let languageSelection = props.languageSelection
-    let languageExplanation = props.languageExplanation;
-    let level=props.level;
+const Flashcard = () => {
+    const languageSelection = useSelector(state => state.data.languageSelection);
+    const languageExplanation = useSelector(state => state.data.languageExplanation);
+    const level = useSelector(state => state.data.level);
 
     const [words, setWords] = useState([]);
     const [currentIndex, setCurrentIndex] = useState(0);
 
-
     const fetchWords = async () => {
         try {
-
             // Clear AsyncStorage to remove old word list
             await AsyncStorage.removeItem('wordList');
 
@@ -28,17 +25,14 @@ const Flashcard = (props) => {
             const storedWords = await AsyncStorage.getItem('wordList');
 
             if (storedWords) {
-
                 // Convert stored list to json object
                 const parsedWords = JSON.parse(storedWords);
 
                 // Convert object to array
-                var result = Object.keys(parsedWords).map((key) => parsedWords[key]);
+                const result = Object.keys(parsedWords).map((key) => parsedWords[key]);
 
                 // Filter the list based on level
-                const filterResult = result.filter((item) => (item.level == level));
-
-                // Set the Final Word List for the App
+                const filterResult = result.filter((item) => item.level === level);
                 setWords(filterResult);
             }
         } catch (error) {
@@ -46,10 +40,9 @@ const Flashcard = (props) => {
         }
     };
 
-
     useEffect(() => {
         fetchWords();
-    }, []);
+    }, [languageSelection, languageExplanation, level]);
 
     if (words.length === 0) return <Text>Loading...</Text>;
 
